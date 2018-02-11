@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>timezones</title>
+    <link rel="stylesheet" type="text/css" href="src/assets/style.css">
+  </head>
+  <body>
+    <div id="app" v-cloak>
+
+        <div class="timezones">
+            <div class="zone" v-for="zone in timezones">
+                <ul class="cities">
+                    <li v-for="city in zone.cities">{{city}}</li>
+                </ul>
+
+                <h2 class="zone-title">{{zone.name}}</h2>
+                    <div class="time">{{zone.diffTime }}</div>
+
+                <select v-model="selectedTime" :value="selectedTime" @change="getDiffTime(zone)" class="hour-select">
+                    <option v-for="time in times">
+                        {{time}}
+                    </option>
+                </select>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/dist/build.js"></script>
+  </body>
+</html>

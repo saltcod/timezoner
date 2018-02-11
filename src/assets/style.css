@@ -1,0 +1,112 @@
+* {
+	box-sizing: border-box;
+}
+[v-cloak] {
+	display: none;
+}
+body {
+	font-family: Lato, "Helvetica Neue";
+	font-size: 16px;
+	line-height: 1.6;
+	background: #f2f3d9;
+	color: navy;
+}
+
+#app {
+	max-width: 1200px;
+	margin: 60px auto 0;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.timezones {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.zone {
+	align-self: flex-end;
+	width: calc(100% / 6);
+	padding: 15px;
+	margin-bottom: 40px;
+}
+
+.cities {
+	color: #a2a2a2;
+	font-size: 14px;
+}
+
+.zone-title {
+	font-size: 18px;
+	border-top: 1px solid;
+}
+
+.time {
+	font-size: 20px;
+	color: #aaa;
+	display: block;
+	margin-bottom: 40px;
+}
+
+.hour-select {
+	border-radius: 0;
+	background: transparent;
+	border: none;
+	color: navy;
+	font-size: 16px;
+	font-weight: bold;
+	opacity: 0.1;
+	width: 120px;
+	padding: 5px 10px;
+	transition: opacity 700ms;
+	-webkit-appearance: none;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQYV2NkQAPLlu3/z4gsBhKIinJkhAvCBECKwILIAmBBdAGQIAC4wBMQDBIQFgAAAABJRU5ErkJggg==);
+}
+.hour-select {
+	cursor: pointer;
+}
+.zone:hover .hour-select {
+	opacity: 1;
+}
+
+.zone:first-of-type .hour-select {
+	animation: fadeInFromNone 12s ease-out;
+}
+
+/* Animate another random one after state has changed*/
+
+@-webkit-keyframes fadeInFromNone {
+	0% {
+		display: none;
+		opacity: 1;
+	}
+
+	20% {
+		display: block;
+		opacity: 0.1;
+	}
+	40% {
+		display: block;
+		opacity: 1;
+	}
+	60% {
+		display: block;
+		opacity: 0.1;
+	}
+	80% {
+		display: block;
+
+		opacity: 1;
+	}
+
+	100% {
+		display: block;
+		opacity: 0.1;
+	}
+}

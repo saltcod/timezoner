@@ -1,10 +1,10 @@
 # timezones
 
-> A Vue.js project
+> A quick project in Vue.js to help compare times across timezones. Uses moment.js for everything time related. Add or subtract locations from main.js to make it your own.
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
