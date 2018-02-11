@@ -76,10 +76,12 @@ ol {
 	padding: 5px 10px;
 	transition: opacity 700ms;
 	-webkit-appearance: none;
+	opacity: 0.1;
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQYV2NkQAPLlu3/z4gsBhKIinJkhAvCBECKwILIAmBBdAGQIAC4wBMQDBIQFgAAAABJRU5ErkJggg==);
-
-	@media (min-width: 768px) {
-		opacity: 0.1;
+}
+@media only screen and (max-width: 767px) {
+	.hour-select {
+		opacity: 1;
 	}
 }
 .hour-select {
