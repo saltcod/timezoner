@@ -32,9 +32,20 @@ ol {
 
 .zone {
 	align-self: flex-end;
-	width: calc(100% / 6);
 	padding: 15px;
 	margin-bottom: 40px;
+
+	@media (max-width: 400px) {
+		width: 100%;
+	}
+
+	@media (max-width: 600px) {
+		width: calc(100% / 2);
+	}
+
+	@media (max-width: 768px) {
+		width: calc(100% / 6);
+	}
 }
 
 .cities {
@@ -61,12 +72,15 @@ ol {
 	color: navy;
 	font-size: 16px;
 	font-weight: bold;
-	opacity: 0.1;
 	width: 120px;
 	padding: 5px 10px;
 	transition: opacity 700ms;
 	-webkit-appearance: none;
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQYV2NkQAPLlu3/z4gsBhKIinJkhAvCBECKwILIAmBBdAGQIAC4wBMQDBIQFgAAAABJRU5ErkJggg==);
+
+	@media (min-width: 768px) {
+		opacity: 0.1;
+	}
 }
 .hour-select {
 	cursor: pointer;
