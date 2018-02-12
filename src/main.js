@@ -17,7 +17,6 @@ new Vue({
 				name: "Pacific",
 				location: "America/Vancouver",
 				cities: ["Portland"],
-				//currentTime: moment.tz("America/St_Johns").format("h:mma")
 				currentTime: "",
 				diffTime: moment()
 					.tz("America/Vancouver")
@@ -53,7 +52,7 @@ new Vue({
 			{
 				name: "Newfoundland",
 				location: "America/St_Johns",
-				cities: ["St. John's"],
+				cities: [],
 				currentTime: "",
 				diffTime: moment()
 					.tz("America/St_Johns")
@@ -72,13 +71,11 @@ new Vue({
 	},
 	methods: {
 		getDiffTime(selectedZone) {
-			// Map over all zones
-
+			// Compare the time selected in the dropdown
+			// (local to the zone it was in) with all other
+			// timezones and update their diffTime
 			this.timezones.map(zone => {
 				const converted = moment
-					// time, selected timezone
-					// this.selectedTime
-					//moment( `${current}`, 'hh:mm A').tz('America/Toronto').format('h:mma')
 					.tz(
 						`${this.selectedTime}`,
 						"hh:mm A",
@@ -89,6 +86,7 @@ new Vue({
 				return (zone.diffTime = converted);
 			});
 		},
+		// Populate the <select> dropdowns with hours and half-hours
 		populateHours() {
 			const start = moment("2018-01-01 08:00");
 			const finish = moment("2018-01-01 23:30");
