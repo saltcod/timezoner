@@ -59,6 +59,15 @@ new Vue({
 					.format("LT")
 			},
 			{
+				name: "Germany",
+				location: "Europe/Berlin",
+				cities: ["Berlin"],
+				currentTime: "",
+				diffTime: moment()
+					.tz("Europe/Berlin")
+					.format("LT")
+			},
+			{
 				name: "Cape Town",
 				location: "Africa/Johannesburg",
 				cities: [],
