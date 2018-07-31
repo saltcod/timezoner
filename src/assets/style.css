@@ -1,11 +1,13 @@
 * {
 	box-sizing: border-box;
 }
+
 [v-cloak] {
 	display: none;
 }
+
 body {
-	font-family: Lato, "Helvetica Neue";
+	font-family: Lato, 'Helvetica Neue';
 	font-size: 16px;
 	line-height: 1.6;
 	background: #f2f3d9;
@@ -26,7 +28,6 @@ ol {
 
 .timezones {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
@@ -79,14 +80,17 @@ ol {
 	opacity: 0.1;
 	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAKElEQVQYV2NkQAPLlu3/z4gsBhKIinJkhAvCBECKwILIAmBBdAGQIAC4wBMQDBIQFgAAAABJRU5ErkJggg==);
 }
+
 @media only screen and (max-width: 767px) {
 	.hour-select {
 		opacity: 1;
 	}
 }
+
 .hour-select {
 	cursor: pointer;
 }
+
 .zone:hover .hour-select {
 	opacity: 1;
 }
@@ -107,17 +111,19 @@ ol {
 		display: block;
 		opacity: 0.1;
 	}
+
 	40% {
 		display: block;
 		opacity: 1;
 	}
+
 	60% {
 		display: block;
 		opacity: 0.1;
 	}
+
 	80% {
 		display: block;
-
 		opacity: 1;
 	}
 

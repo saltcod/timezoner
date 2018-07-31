@@ -1,6 +1,6 @@
-import Vue from "vue";
-var moment = require("moment-timezone");
-Vue.use(require("vue-moment"));
+import Vue from 'vue';
+var moment = require('moment-timezone');
+Vue.use(require('vue-moment'));
 
 // var current = '10:00 AM';
 // moment( `${current}`, 'hh:mm A').tz('America/Toronto').format('h:mma')
@@ -8,73 +8,82 @@ Vue.use(require("vue-moment"));
 //const currently = moment.tz("America/St_Johns").format();
 
 new Vue({
-	el: "#app",
+	el: '#app',
 	data: {
-		selectedTime: moment().format("lll"), //set a default
+		selectedTime: moment().format('lll'), //set a default
 		times: [],
 		timezones: [
 			{
-				name: "Pacific",
-				location: "America/Vancouver",
-				cities: ["Portland"],
-				currentTime: "",
+				name: 'Pacific',
+				location: 'America/Vancouver',
+				cities: ['Portland'],
+				currentTime: '',
 				diffTime: moment()
-					.tz("America/Vancouver")
-					.format("LT")
+					.tz('America/Vancouver')
+					.format('LT')
 			},
 			{
-				name: "Mountain",
-				location: "America/Phoenix",
-				cities: ["Utah", "Denver", "Phoenix", "Jackson"],
-				currentTime: "",
+				name: 'Mountain',
+				location: 'America/Phoenix',
+				cities: ['Utah', 'Denver', 'Phoenix', 'Jackson'],
+				currentTime: '',
 				diffTime: moment()
-					.tz("America/Phoenix")
-					.format("LT")
+					.tz('America/Phoenix')
+					.format('LT')
 			},
 			{
-				name: "Central",
-				location: "America/Chicago",
-				cities: ["KC", "Louisiana", "North Dakota", "Texas"],
-				currentTime: "",
+				name: 'Central',
+				location: 'America/Chicago',
+				cities: ['KC', 'Louisiana', 'North Dakota', 'Texas'],
+				currentTime: '',
 				diffTime: moment()
-					.tz("America/Chicago")
-					.format("LT")
+					.tz('America/Chicago')
+					.format('LT')
 			},
 			{
-				name: "Eastern",
-				location: "America/New_York",
-				cities: ["NYC", "Boston", "Miami", "Florida"],
-				currentTime: "",
+				name: 'Eastern',
+				location: 'America/New_York',
+				cities: ['NYC', 'Boston', 'Miami', 'Florida'],
+				currentTime: '',
 				diffTime: moment()
-					.tz("America/New_York")
-					.format("LT")
+					.tz('America/New_York')
+					.format('LT')
 			},
 			{
-				name: "Newfoundland",
-				location: "America/St_Johns",
+				name: 'Newfoundland',
+				location: 'America/St_Johns',
 				cities: [],
-				currentTime: "",
+				currentTime: '',
 				diffTime: moment()
-					.tz("America/St_Johns")
-					.format("LT")
+					.tz('America/St_Johns')
+					.format('LT')
 			},
 			{
-				name: "Germany",
-				location: "Europe/Berlin",
-				cities: ["Berlin"],
-				currentTime: "",
+				name: 'Germany',
+				location: 'Europe/Berlin',
+				cities: ['Berlin'],
+				currentTime: '',
 				diffTime: moment()
-					.tz("Europe/Berlin")
-					.format("LT")
+					.tz('Europe/Berlin')
+					.format('LT')
 			},
 			{
-				name: "Cape Town",
-				location: "Africa/Johannesburg",
+				name: 'Cape Town',
+				location: 'Africa/Johannesburg',
 				cities: [],
-				currentTime: "",
+				currentTime: '',
 				diffTime: moment()
-					.tz("Africa/Johannesburg")
-					.format("LT")
+					.tz('Africa/Johannesburg')
+					.format('LT')
+			},
+			{
+				name: 'Jakarta',
+				location: 'Asia/Jakarta',
+				cities: [],
+				currentTime: '',
+				diffTime: moment()
+					.tz('Asia/Jakarta')
+					.format('LT')
 			}
 		]
 	},
@@ -87,25 +96,25 @@ new Vue({
 				const converted = moment
 					.tz(
 						`${this.selectedTime}`,
-						"hh:mm A",
+						'hh:mm A',
 						selectedZone.location
 					)
 					.tz(zone.location)
-					.format("h:mma");
+					.format('h:mma');
 				return (zone.diffTime = converted);
 			});
 		},
 		// Populate the <select> dropdowns with hours and half-hours
 		populateHours() {
-			const start = moment("2018-01-01 08:00");
-			const finish = moment("2018-01-01 23:30");
+			const start = moment('2018-01-01 08:00');
+			const finish = moment('2018-01-01 23:30');
 
 			for (
 				var m = moment(start);
 				m.isBefore(finish);
-				m.add(30, "minutes")
+				m.add(30, 'minutes')
 			) {
-				this.times.push(m.format("h:mm a"));
+				this.times.push(m.format('h:mm a'));
 			}
 		}
 	},
@@ -115,7 +124,7 @@ new Vue({
 
 		// Add current time to each zone
 		const zones = this.timezones.map(zone => {
-			const currently = moment.tz(zone.location).format("h:mma");
+			const currently = moment.tz(zone.location).format('h:mma');
 			return (zone.currentTime = currently);
 		});
 	}
