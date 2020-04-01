@@ -61,10 +61,19 @@ new Vue({
             {
                 name: "United Kingdom",
                 location: "Europe/London",
-                cities: ["London, Edinburgh "],
+                cities: ["London", "Edinburgh"],
                 currentTime: "",
                 diffTime: moment()
                     .tz("Europe/London")
+                    .format("LT")
+            },
+            {
+                name: "Portugal",
+                location: "Europe/London",
+                cities: ["Lisbon "],
+                currentTime: "",
+                diffTime: moment()
+                    .tz("Europe/Lisbon")
                     .format("LT")
             },
             {
