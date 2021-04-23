@@ -95,6 +95,15 @@ new Vue({
                     .format("LT")
             },
             {
+                name: "India",
+                location: "Asia/Calcutta",
+                cities: ['Chennai', 'Mumbai', 'Pune', ],
+                currentTime: "",
+                diffTime: moment()
+                    .tz("Asia/Calcutta")
+                    .format("LT")
+            },
+            {
                 name: "Jakarta",
                 location: "Asia/Jakarta",
                 cities: [],
