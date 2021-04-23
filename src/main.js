@@ -16,7 +16,7 @@ new Vue({
             {
                 name: "Pacific",
                 location: "America/Vancouver",
-                cities: ["Portland"],
+                cities: ["NorCal", "SoCal", "General Cal", "Portland"],
                 currentTime: "",
                 diffTime: moment()
                     .tz("America/Vancouver")
