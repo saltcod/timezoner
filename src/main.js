@@ -113,6 +113,15 @@ new Vue({
                     .format("LT")
             },
             {
+                name: "Singapore",
+                location: "Asia/Singapore",
+                cities: [],
+                currentTime: "",
+                diffTime: moment()
+                    .tz("Asia/Singapore")
+                    .format("LT")
+            },
+            {
                 name: "Australian Eastern",
                 location: "Australia/Melborne",
                 cities: ["Melborne"],
