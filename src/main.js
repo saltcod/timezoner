@@ -151,8 +151,8 @@ new Vue({
         },
         // Populate the <select> dropdowns with hours and half-hours
         populateHours() {
-            const start = moment("2018-01-01 08:00");
-            const finish = moment("2018-01-01 23:30");
+            const start = moment("2018-01-01 06:00");
+            const finish = moment("2018-01-01 24:00");
 
             for (
                 var m = moment(start);
