@@ -136,7 +136,7 @@ new Vue({
                 cities: ["Melborne"],
                 currentTime: "",
                 diffTime: moment()
-                    .tz("Australia/Sydney")
+                    .tz("Australia/Lord_Howe")
                     .format("LT")
             }
         ]
