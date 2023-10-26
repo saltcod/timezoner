@@ -16,7 +16,7 @@ new Vue({
             {
                 name: "Pacific",
                 location: "America/Vancouver",
-                cities: ["NorCal", "SoCal", "General Cal", "Portland"],
+                cities: ["Vancouver", "Portland", "San Francisco"],
                 currentTime: "",
                 diffTime: moment()
                     .tz("America/Vancouver")
@@ -24,11 +24,11 @@ new Vue({
             },
             {
                 name: "Mountain",
-                location: "America/Phoenix",
-                cities: ["Utah", "Denver", "Phoenix", "Jackson"],
+                location: "America/Edmonton",
+                cities: ["Calgary"],
                 currentTime: "",
                 diffTime: moment()
-                    .tz("America/Phoenix")
+                    .tz("America/Edmonton")
                     .format("LT")
             },
             {
@@ -56,15 +56,6 @@ new Vue({
                 currentTime: "",
                 diffTime: moment()
                     .tz("America/St_Johns")
-                    .format("LT")
-            },
-            {
-                name: "Uruguay",
-                location: "America/Montevideo",
-                cities: [],
-                currentTime: "",
-                diffTime: moment()
-                    .tz("America/Montevideo")
                     .format("LT")
             },
             {
@@ -106,19 +97,10 @@ new Vue({
             {
                 name: "India",
                 location: "Asia/Calcutta",
-                cities: ['Chennai', 'Mumbai', 'Pune', ],
-                currentTime: "",
-                diffTime: moment()
-                    .tz("Asia/Calcutta")
-                    .format("LT")
-            },
-            {
-                name: "Jakarta",
-                location: "Asia/Jakarta",
                 cities: [],
                 currentTime: "",
                 diffTime: moment()
-                    .tz("Asia/Jakarta")
+                    .tz("Asia/Calcutta")
                     .format("LT")
             },
             {
