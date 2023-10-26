@@ -61,7 +61,7 @@ new Vue({
             {
                 name: "Uruguay",
                 location: "America/Montevideo",
-                cities: ["Fran"],
+                cities: [],
                 currentTime: "",
                 diffTime: moment()
                     .tz("America/Montevideo")
@@ -132,8 +132,8 @@ new Vue({
             },
             {
                 name: "Australian Eastern",
-                location: "Australia/Melborne",
-                cities: ["Melborne"],
+                location: "Australia/Melbourne",
+                cities: ["Melbourne"],
                 currentTime: "",
                 diffTime: moment()
                     .tz("Australia/Lord_Howe")
